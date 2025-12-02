@@ -1,0 +1,46 @@
+.loaderSection {
+  width: 99vw;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.loader {
+  position: relative;
+  cursor: pointer;
+  -webkit-box-reflect: below -25px linear-gradient(transparent, #0007);
+}
+
+.loader span {
+  position: relative;
+  display: inline-flex;
+  font-size: 3em;
+  color: transparent;
+  -webkit-text-stroke: 1px #fff9;
+  text-transform: uppercase;
+  font-weight: 800;
+  animation: loadAnimation 2s ease-in-out infinite;
+  animation-delay: calc(0.15s * var(--i));
+}
+
+@keyframes loadAnimation {
+  0% {
+    transform: translateY(0px);
+    color: transparent;
+    text-shadow: none;
+  }
+  20% {
+    transform: translateY(-60px);
+    color: white;
+    text-shadow: 0 0 5px #fff, 0 0 25px #fff, 0 0 50px #fff;
+  }
+  40%,
+  100% {
+    transform: translateY(0px);
+    color: transparent;
+    text-shadow: none;
+  }
+}
