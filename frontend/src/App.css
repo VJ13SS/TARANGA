@@ -13,6 +13,10 @@ li{
   width: 0;
 }
 
+a{
+  text-decoration: none;
+}
+
 .app{
   scrollbar-width: none;
   -ms-overflow-style: none;

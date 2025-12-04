@@ -19,7 +19,7 @@ export default function Navbar(){
                 <li  style={currentSection === "about" ? {border: "2px solid white"}:{}}><Link to="/about" style={linkStyle} onClick={() => setCurrentSection('about')}>About</Link></li>
                 <li  style={currentSection === "events" ? {border: "2px solid white"}:{}}><Link to="events" style={linkStyle} onClick={() => setCurrentSection('events')}>Events</Link></li>
             </ul>
-            <button className='nav-right'>Elacsta</button>
+            <a href='https://elacsta.web.app/' className='nav-right'>Elacsta</a>
         </nav>
     )
 }
