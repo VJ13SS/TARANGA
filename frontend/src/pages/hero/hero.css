@@ -11,7 +11,7 @@
     font-size: 5vw;
     color: black;
     position: relative;
-    -webkit-text-stroke: 0.05vw rgb(109, 107, 107);
+    -webkit-text-stroke: 0.15vw rgb(109, 107, 107);
     text-transform: uppercase;
     
 }
@@ -28,8 +28,7 @@
     border-right: 2px solid white;
     overflow: hidden;
     text-shadow: 0 0 5px #fff;
-  
-    animation: heroAnimation 6s linear infinite;
+    animation: heroAnimation 4.5s linear infinite;
 }
 
 @keyframes heroAnimation{

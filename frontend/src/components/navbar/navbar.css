@@ -13,6 +13,7 @@ nav {
   font-size: 25px;
   font-weight: bold;
   color: white;
+  text-shadow: 0 0 5px #fff;
 }
 
 .nav-right {

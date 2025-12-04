@@ -12,7 +12,7 @@ import Sidebar from "./components/sidebar/sidebar";
 export default function App() {
   const navigate = useNavigate();
   const [displayLoader, setDisplayLoader] = useState(true);
-  const delay = window.innerWidth > 700 ? 8000 :4000
+  const delay = window.innerWidth > 700 ? 8000 :2000
   useEffect(() => {
     navigate("/");
     setTimeout(() => {
@@ -55,14 +55,14 @@ export default function App() {
       <div className="samples">
         <Navbar />
         
-        <Sidebar />
+       
         <Routes>
           <Route path="/" element={<Hero />} />
           <Route path="/about" element={<About />} />
           <Route path="/events" element={<Events />}></Route>
           <Route path="eventInfo" element={<EventInfo />} />
         </Routes>
-        <Footer />
+       {window.innerWidth < 501 && <Sidebar />}
       </div>
     </div>
   );

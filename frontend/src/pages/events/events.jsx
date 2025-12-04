@@ -13,7 +13,7 @@ export default function Events() {
   useEffect(() => {
     setTimeout(() => {
       setDisplayLoader(false);
-    }, 4000);
+    }, 2000);
   }, []);
 
   if (displayLoader) {

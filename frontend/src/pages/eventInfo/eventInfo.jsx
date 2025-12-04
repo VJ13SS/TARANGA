@@ -172,21 +172,21 @@ export default function EventInfo() {
               onClick={() => setChosenDay("day1")}
               style={chosenDay == "day1" ? dayStyle : {}}
             >
-              Day 1
+              JAN 9
             </div>
             <div
               className="day"
               onClick={() => setChosenDay("day2")}
               style={chosenDay == "day2" ? dayStyle : {}}
             >
-              Day 2
+              JAN 10
             </div>
             <div
               className="day"
               onClick={() => setChosenDay("day3")}
               style={chosenDay == "day3" ? dayStyle : {}}
             >
-              Day 3
+              JAN 11
             </div>
           </div>
           <div className="plannedEvents">

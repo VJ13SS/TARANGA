@@ -9,7 +9,7 @@ export default function About() {
   useEffect(() => {
     setTimeout(() => {
       setDisplayLoader(false);
-    }, 4000);
+    }, 2000);
   }, []);
 
   if (displayLoader) {
@@ -24,7 +24,7 @@ export default function About() {
         molestiae velit libero iste magnam reprehenderit nulla exercitationem
         culpa voluptas, soluta impedit quaerat non maxime minima possimus
         tempora sequi ipsam. Quibusdam!
-      </p>
+          </p>
       <div className="logo"></div>
       </div>
       

@@ -8,9 +8,10 @@ export default function Sidebar(){
     const navigate = useNavigate()
     return(
         <div className="sidebar">
-            <FaHome className="sidebarIcon" onClick={() => navigate('/')}/>
-            <FaInfo className="sidebarIcon" onClick={() => navigate('/about')}/>
-            <BsCalendarEvent className="sidebarIcon" onClick={() => navigate('/events')}/>
+            <span onClick={() => navigate('/')}>Home <FaHome className="sidebarIcon" /></span>
+            <span onClick={() => navigate('/about')}>About <FaInfo className="sidebarIcon" /></span>
+            <span onClick={() => navigate('/events')}>Events <BsCalendarEvent className="sidebarIcon" /></span>
+            
         
         </div>
     )
