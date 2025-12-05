@@ -21,7 +21,7 @@ export default function Events() {
   }
   return (
     <section className="events">
-      <h1>Events</h1>
+    
       <div className="eventsPlanned">
         <Link
           to={"/eventInfo"}

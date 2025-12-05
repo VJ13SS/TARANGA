@@ -8,6 +8,7 @@
     flex-direction: column;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     overflow: scroll;
+    color: white;
 }
 
 .about h1{
@@ -28,7 +29,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 30px;
+    gap: 20px;
   
 }
 .about .logo{
@@ -39,19 +40,31 @@
     animation: fadeLeft 2s linear;
 }
 
+.aboutDetails span{
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.logo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50px;
+}
+
 @media (max-width:700px){
     .about{
         flex-direction: column;
     }
 
     .aboutDetails{
-        flex-direction: column-reverse;
+        flex-direction: column;
     }
 
     .about p{
         max-width: 90%;
         font-size: 18px;
-        
+        text-align: justify;
         line-height: 30px;
     }
 }

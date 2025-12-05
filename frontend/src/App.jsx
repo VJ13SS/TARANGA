@@ -12,7 +12,7 @@ import Sidebar from "./components/sidebar/sidebar";
 export default function App() {
   const navigate = useNavigate();
   const [displayLoader, setDisplayLoader] = useState(true);
-  const delay = window.innerWidth > 100 ? 8000 :2000
+  const delay = 8000
   useEffect(() => {
     navigate("/");
     setTimeout(() => {
@@ -28,12 +28,14 @@ export default function App() {
 
   if (displayLoader) {
     return (
-      <div className="app">
-        {window.innerWidth > 100 ?
+      <div className="app" style={{overflow:'hidden'}}>
+        {window.innerWidth < 500 ?
         <video autoPlay loop muted playsInline className="backVideo">
           <source src="./eventVideoMobile.mp4" type="video/mp4" />
         </video> :
-        <Loader />}
+        <video autoPlay loop muted playsInline className="backVideo">
+          <source src="./eventVideo.mp4" type="video/mp4" />
+        </video>}
       </div>
     );
   }

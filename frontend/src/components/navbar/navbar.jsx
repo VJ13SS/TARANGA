@@ -13,13 +13,13 @@ export default function Navbar(){
     const navigate = useNavigate()
     return(
         <nav>
-            <span className='nav-left' onClick={() => navigate('/')}>TARANGA</span>
+            <span className='nav-left' onClick={() => navigate('/')}><i>TARANGA</i></span>
             <ul className='nav-links'>
-                <li style={currentSection === "home" ? {border: "2px solid white"}:{}}><Link to="/" style={linkStyle} onClick={() => setCurrentSection('home')}>Home</Link></li>
-                <li  style={currentSection === "about" ? {border: "2px solid white"}:{}}><Link to="/about" style={linkStyle} onClick={() => setCurrentSection('about')}>About</Link></li>
-                <li  style={currentSection === "events" ? {border: "2px solid white"}:{}}><Link to="events" style={linkStyle} onClick={() => setCurrentSection('events')}>Events</Link></li>
+                <li style={currentSection === "home" ? {border: "2px solid white"}:{}}><i><Link to="/" style={linkStyle} onClick={() => setCurrentSection('home')}>Home</Link></i></li>
+                <li  style={currentSection === "about" ? {border: "2px solid white"}:{}}><i><Link to="/about" style={linkStyle} onClick={() => setCurrentSection('about')}>About</Link></i></li>
+                <li  style={currentSection === "events" ? {border: "2px solid white"}:{}}><i><Link to="events" style={linkStyle} onClick={() => setCurrentSection('events')}>Events</Link></i></li>
             </ul>
-            <a href='https://elacsta.web.app/' className='nav-right'>Elacsta</a>
+            <a href='https://elacsta.web.app/' className='nav-right'><i>Elacsta</i></a>
         </nav>
     )
 }

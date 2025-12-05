@@ -17,17 +17,22 @@ export default function About() {
   }
   return (
     <section className="about">
-      <h1>TARANGA</h1>
+      <h1><i>TARANGA</i></h1>
       <div className="aboutDetails">
+        <div className="logo">
+          <img src="/tarangaLogo.jpg" alt="" />
+        </div>
         <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque
-        molestiae velit libero iste magnam reprehenderit nulla exercitationem
-        culpa voluptas, soluta impedit quaerat non maxime minima possimus
-        tempora sequi ipsam. Quibusdam!
-          </p>
-      <div className="logo"></div>
+          <i>
+            A tech summit where technology rises, ideas resonate, and the future
+            begins to take shape. From circuits to creativity, from signals to
+            innovation TARANGA brings together every spark that defines the
+            spirit of ECE.
+          </i>
+        </p>
+        
+        <span><i>See on JAN 09 • 10 • 11</i></span>
       </div>
-      
     </section>
   );
 }

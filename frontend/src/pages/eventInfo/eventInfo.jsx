@@ -82,7 +82,7 @@ export default function EventInfo() {
   const day2Events = [
     {
       name: "FPGA Workshop",
-      time: "9 Am - 4 pm",
+      time: "9 Am - 4 Pm",
       venue: "EC Lab",
     },
     {
@@ -145,89 +145,99 @@ export default function EventInfo() {
     "fadeLeft 3.5s linear",
     "fadeUp 3.5s linear",
     "fadeDown 3.5s linear",
-  ]
+  ];
 
   return (
     <section className="eventInfo">
       {eventType === "Pre Events" ? (
         <>
-          <h1>Pre Events</h1>
+          <h1><i>Pre Events</i></h1>
           <div className="plannedEvents">
             {preEvents.map((event, indx) => (
-              <div
-                className="plannedEvent"
-                >
-                <h2>{event.name}</h2>
-                <span>{event.mode}</span>
+              <div className="plannedEvent">
+                <h2><i>{event.name}</i></h2>
+                <span><i>{event.mode}</i></span>
               </div>
             ))}
           </div>
         </>
       ) : (
         <>
-          <h1>Major Events</h1>
+          <h1><i>Major Events</i></h1>
           <div className="days">
             <div
               className="day"
               onClick={() => setChosenDay("day1")}
               style={chosenDay == "day1" ? dayStyle : {}}
             >
-              JAN 9
+              <i>JAN 9</i>
             </div>
             <div
               className="day"
               onClick={() => setChosenDay("day2")}
               style={chosenDay == "day2" ? dayStyle : {}}
             >
-              JAN 10
+              <i>JAN 10</i>
             </div>
             <div
               className="day"
               onClick={() => setChosenDay("day3")}
               style={chosenDay == "day3" ? dayStyle : {}}
             >
-              JAN 11
+              <i>JAN 11</i>
             </div>
           </div>
           <div className="plannedEvents">
             {chosenDay === "day1"
               ? day1Events.map((event, indx) => (
-                  <div
-                    className="plannedEvent"
-                      >
-                    <h2>{event.name}</h2>
+                  <div className="plannedEvent">
+                    <h2>
+                      <i>{event.name}</i>
+                    </h2>
                     <span>
-                      <FiClock /> {event.time}
+                      <i>
+                        <FiClock /> {event.time}
+                      </i>
                     </span>
                     <span>
-                      <FiMapPin /> {event.venue}{" "}
+                      <i>
+                        <FiMapPin /> {event.venue}{" "}
+                      </i>
                     </span>
                   </div>
                 ))
               : chosenDay === "day2"
               ? day2Events.map((event, indx) => (
-                  <div
-                    className="plannedEvent"
-                     >
-                    <h2>{event.name}</h2>
+                  <div className="plannedEvent">
+                    <h2>
+                      <i>{event.name}</i>
+                    </h2>
                     <span>
-                      <FiClock /> {event.time}
+                      <i>
+                        <FiClock /> {event.time}
+                      </i>
                     </span>
                     <span>
-                      <FiMapPin /> {event.venue}{" "}
+                      <i>
+                        <FiMapPin /> {event.venue}{" "}
+                      </i>
                     </span>
                   </div>
                 ))
               : day3Events.map((event, indx) => (
-                  <div
-                    className="plannedEvent"
-                     >
-                    <h2>{event.name}</h2>
+                  <div className="plannedEvent">
+                    <h2>
+                      <i>{event.name}</i>
+                    </h2>
                     <span>
-                      <FiClock /> {event.time}
+                      <i>
+                        <FiClock /> {event.time}
+                      </i>
                     </span>
                     <span>
-                      <FiMapPin /> {event.venue}{" "}
+                      <i>
+                        <FiMapPin /> {event.venue}{" "}
+                      </i>
                     </span>
                   </div>
                 ))}

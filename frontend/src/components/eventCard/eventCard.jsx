@@ -7,7 +7,7 @@ export default function EventCard({title,imgPath}){
                 <img src={imgPath} alt="" />
             </div>
             <div className="details">
-                <span>{title}</span>
+                <span><i>{title}</i></span>
             </div>
         </div>
     )
