@@ -19,7 +19,7 @@ export default function Navbar(){
                 <li  style={currentSection === "about" ? {border: "2px solid white"}:{}}><i><Link to="/about" style={linkStyle} onClick={() => setCurrentSection('about')}>About</Link></i></li>
                 <li  style={currentSection === "events" ? {border: "2px solid white"}:{}}><i><Link to="events" style={linkStyle} onClick={() => setCurrentSection('events')}>Events</Link></i></li>
             </ul>
-            <a href='https://elacsta.web.app/' className='nav-right'><i>Elacsta</i></a>
+            <a href='https://elacsta-website.vercel.app/' className='nav-right'><i>Elacsta</i></a>
         </nav>
     )
 }
