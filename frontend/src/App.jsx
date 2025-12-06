@@ -9,6 +9,7 @@ import Footer from "./components/footer/footer";
 import { useEffect, useState } from "react";
 import Loader from "./components/loader/loader";
 import Sidebar from "./components/sidebar/sidebar";
+import LeaderBoard from "./pages/leaderBoard/leaderBoard";
 export default function App() {
   const navigate = useNavigate();
   const [displayLoader, setDisplayLoader] = useState(true);
@@ -62,7 +63,8 @@ export default function App() {
           <Route path="/" element={<Hero />} />
           <Route path="/about" element={<About />} />
           <Route path="/events" element={<Events />}></Route>
-          <Route path="eventInfo" element={<EventInfo />} />
+          <Route path="/eventInfo" element={<EventInfo />} />
+          <Route path="/leaderBoard" element={<LeaderBoard />} />
         </Routes>
        {window.innerWidth < 501 && <Sidebar />}
       </div>

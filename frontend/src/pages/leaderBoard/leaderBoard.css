@@ -1,0 +1,29 @@
+.leaderBoard {
+  min-height: 80vh;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.leaderBoard table {
+  border-collapse: collapse;
+  color: white;
+  border: 2px solid white;
+  border-radius: 20px;
+  min-width: 65%;
+  max-width: 95%;
+  animation: fadeLeft 2s linear;
+}
+
+table thead{
+    font-weight: bold;
+}
+
+tr,
+td {
+  text-align: center;
+  border: 2px solid white;
+  padding: 7px;
+  font-size: 20px;
+}

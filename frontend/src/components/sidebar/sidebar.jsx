@@ -1,4 +1,4 @@
-import { FaAirFreshener, FaHome, FaInfo, FaInfoCircle } from "react-icons/fa"
+import { FaAirFreshener, FaHome, FaInfo, FaInfoCircle, FaMedal } from "react-icons/fa"
 import {BsCalendarEvent} from "react-icons/bs"
 import {MdInfo} from "react-icons/md"
 import "./sidebar.css"
@@ -11,6 +11,7 @@ export default function Sidebar(){
             <span onClick={() => navigate('/')}>Home <FaHome className="sidebarIcon" /></span>
             <span onClick={() => navigate('/about')}>About <FaInfo className="sidebarIcon" /></span>
             <span onClick={() => navigate('/events')}>Events <BsCalendarEvent className="sidebarIcon" /></span>
+            <span onClick={() => navigate('/leaderBoard')}>LeaderBoard<FaMedal className="sidebarIcon" /></span>
             
         
         </div>

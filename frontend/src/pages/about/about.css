@@ -30,7 +30,7 @@
     justify-content: center;
     align-items: center;
     gap: 20px;
-  
+  flex-direction: column;
 }
 .about .logo{
     border: 2px solid white;
@@ -43,6 +43,7 @@
 .aboutDetails span{
     font-size: 25px;
     font-weight: bold;
+    animation: fadeLeft 2s linear;
 }
 
 .logo img{
