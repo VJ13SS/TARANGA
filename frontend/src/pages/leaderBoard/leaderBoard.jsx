@@ -67,6 +67,7 @@ export default function LeaderBoard() {
   };
   return (
     <section className="leaderBoard">
+      <h1><i>Leader Board</i></h1>
       <table>
         <thead>
           <tr>
