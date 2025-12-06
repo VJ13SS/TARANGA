@@ -35,3 +35,10 @@ td {
   font-size: 20px;
   font-weight: 500;
 }
+
+@media(max-width:500px){
+  .leaderBoard table{
+    width: 85%;
+    
+  }
+}
