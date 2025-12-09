@@ -1,0 +1,35 @@
+.app{
+  min-height: 90vh;
+  
+}
+
+.app,.app form{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app form{
+  flex-direction: column;
+  width: 90vw;
+  gap: 35px;
+}
+
+.app form select{
+  height: 40px;
+  width: 90%;
+  font-size: 20px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid black;
+}
+
+.app form button{
+  height: 40px;
+  width: 50%;
+  background-color: blue;
+  color: white;
+  border:none;
+  border-radius: 10px;
+}
