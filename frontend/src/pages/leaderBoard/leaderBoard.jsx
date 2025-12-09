@@ -87,7 +87,7 @@ export default function LeaderBoard() {
       <h1>
         <i>Leader Board</i>
       </h1>
-      {teams.length == 0 ? <h2>Fetching Information</h2> :
+      {teams.length == 0 ? <h2>Fetching Information..!</h2> :
       <table>
         <thead>
           <tr>
