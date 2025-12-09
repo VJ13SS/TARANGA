@@ -42,6 +42,7 @@ export default function App() {
   return (
     <div className="app">
       <h1>Update Scores</h1>
+      {disableSubmit && <span>Updating Scores</span>}
     {teams.length == 0 ? <h1>Fetching Information</h1> :
       <form action="" onSubmit={(e) => submitScore(e)}>
         <select
