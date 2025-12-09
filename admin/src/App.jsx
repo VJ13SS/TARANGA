@@ -7,19 +7,15 @@ export default function App() {
   const teamsCollectionRef = collection(db,"teams")
   const [teamData, setTeamData] = useState({ team: "", score: 0 });
   const [teams,setTeams] = useState([])
-
+  const [disableSubmit,setDisableSubmit] = useState(false)
   const updateScore = (id,teamData) =>{
     const teamDoc = doc(db,"teams",id)
     return updateDoc(teamDoc,teamData)
   }
-
-  const getTeam = (id) => {
-    const teamDoc = doc(db,"teams",id)
-    return getDoc(teamDoc)
-  }
   
   const submitScore = async (e) => {
     e.preventDefault();
+    setDisableSubmit(true)
     for(let teamDetails of teams){
       if(teamDetails.team == teamData.team){
         teamDetails.score = teamDetails.score + teamData.score
@@ -28,6 +24,7 @@ export default function App() {
     }
     console.log(teams,'done')
     alert('Team Scores updated')
+    setDisableSubmit(false)
   };
 
   const getTeamScores = async () => {
@@ -44,6 +41,7 @@ export default function App() {
  console.log(teams)
   return (
     <div className="app">
+      <h1>Update Scores</h1>
     {teams.length == 0 ? <h1>Fetching Information</h1> :
       <form action="" onSubmit={(e) => submitScore(e)}>
         <select
@@ -88,7 +86,7 @@ export default function App() {
           <option value="third">Third</option>
           <option value="participant">Participant</option>
         </select>
-        <button type="submit">Submit</button>
+        <button type="submit" disabled={disableSubmit}>Submit</button>
       </form>}
     </div>
   );
