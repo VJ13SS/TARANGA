@@ -31,7 +31,7 @@ export default function About() {
           </i>
         </p>
         
-        <span><i>See on JAN 09 • 10 • 11</i></span>
+        <span><i>See on JAN 09 • 10 • 11 2026</i></span>
       </div>
     </section>
   );

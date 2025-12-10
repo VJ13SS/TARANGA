@@ -163,7 +163,8 @@ export default function EventInfo() {
                     <img src={event.img} alt="" />
                   </div>
                   <div className="eventDetails">
-                    <span>{event.name}</span>
+                    <i><span>{event.name}</span></i>
+                    
                     <a href={event.link}>Register</a>
                   </div>
                 </div>

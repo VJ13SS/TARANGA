@@ -84,6 +84,7 @@
   border: 1px solid white;
   padding: 5px;
   border-radius: 5px;
+  font-weight: bold;
 }
 
 .eventDetails a{
@@ -103,6 +104,8 @@
 
 .eventImage{
   transform: rotateY(0deg);
+  border: 1px solid white;
+  border-radius: 10px;
 }
 
 .eventImage img{
