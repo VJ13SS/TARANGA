@@ -21,7 +21,7 @@
   height: 90%;
   overflow: scroll;
   display: flex;
-  gap: 20px;
+  gap: 30px;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
@@ -53,44 +53,71 @@
   transform: scale(1.2);
 }
 
-@property --angle{
-    syntax: "<angle>";
-    initial-value: 0deg;
-    inherits: false;
-    
-}
-/*
-.plannedEvent::after,.plannedEvent::before{
-    content: "";
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    background-image: conic-gradient(from var(--angle),transparent 30%,white,black,white);
-    top: 50%;
-    left: 50%;
-    translate: -50% -50%;
-    z-index: -1;
-    border-radius: 30px;
-    padding: 3px;
-    animation: spin 3s linear infinite;
-    
-}
-
-.plannedEvent::before{
-    filter: blur(1.5rem);
-    opacity: 0.3;
-}
-
-@keyframes spin{
-    from{
-        --angle:0deg;
-    }
-    to{
-        --angle:360deg;
-    }
-}*/
 .plannedEvent h2 {
   max-width: 80%;
+}
+
+.preEvent{
+  perspective: 10000px;
+}
+
+.eventInfoCard{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: all 0.3s ease;
+}
+
+.eventDetails{
+  width: 250px;
+  height: 250px;
+  transform: rotateY(180deg);
+  background-color:transparent;
+  color: white;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  border: 1px solid white;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.eventDetails a{
+  padding: 3px;
+  text-decoration: none;
+  color: white;
+  border: 2px solid white;
+  border-radius: 3px;
+}
+
+.plannedEvent .eventImage,.preEvent{
+  padding: 0;
+  width: 250px;
+  height: 300px;
+  border-radius: 10px;
+}
+
+.eventImage{
+  transform: rotateY(0deg);
+}
+
+.eventImage img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.eventImage,.eventDetails{
+  position: absolute;
+  backface-visibility: hidden;
+}
+.preEvent:hover .eventInfoCard{
+  transform: rotateY(180deg);
 }
 
 .plannedEvent span {

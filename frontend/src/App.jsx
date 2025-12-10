@@ -13,7 +13,7 @@ import LeaderBoard from "./pages/leaderBoard/leaderBoard";
 export default function App() {
   const navigate = useNavigate();
   const [displayLoader, setDisplayLoader] = useState(true);
-  const delay = window.innerWidth < 501 ? 3300 :8000
+  const delay = window.innerWidth < 501 ? 3200 :8000
   useEffect(() => {
     navigate("/");
     setTimeout(() => {

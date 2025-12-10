@@ -7,32 +7,34 @@ export default function EventInfo() {
   const { eventType, setEventType } = useContext(AppContext);
   const preEvents = [
     {
-      name: "Code And Predict",
-      mode: "Offline",
+      name: "T-Shirt Design Contest",
+      img: "./preEvent1.jpg",
+      link: "https://forms.gle/kgrdKMrEVeWcwZqUA",
     },
     {
-      name: "Poster Designing Contest",
-      mode: "Online",
+      name: "CODE AND PREDICT",
+      img: "./preEvent2.jpg",
+      link: "https://forms.gle/L2d9i4BgJUjcgP1T7",
     },
     {
-      name: "AI & ML : Talk Session & Project",
-      mode: "Hybrid",
+      name: "FOX HUNTING",
+      img: "./preEvent3.jpg",
+      link: "",
     },
     {
-      name: "Snap Hunt Challenge",
-      mode: "Hybrid",
+      name: "POSTER DESIGNING COMPETITION",
+      img: "./preEvent4.jpg",
+      link: "",
     },
     {
-      name: "Fox Hunting (Treasure Hunt)",
-      mode: "Offline",
+      name: "SNAP HUNT",
+      img: "./preEvent5.jpg",
+      link: "",
     },
     {
-      name: "Digital Doodle Challenge",
-      mode: "Online",
-    },
-    {
-      name: "Reels Challenge : Engineering - Expectation v/s Reality",
-      mode: "Online",
+      name: "ELECTRONICS REELS CHALLENGE",
+      img: "./preEvent6.jpg",
+      link: "",
     },
   ];
 
@@ -153,18 +155,18 @@ export default function EventInfo() {
     <section className="eventInfo">
       {eventType === "Pre Events" ? (
         <>
-          <h1>
-            <i>Pre Events</i>
-          </h1>
           <div className="plannedEvents">
             {preEvents.map((event, indx) => (
-              <div className="plannedEvent">
-                <h2>
-                  <i>{event.name}</i>
-                </h2>
-                <span>
-                  <i>{event.mode}</i>
-                </span>
+              <div className="preEvent">
+                <div className="eventInfoCard">
+                  <div className="eventImage">
+                    <img src={event.img} alt="" />
+                  </div>
+                  <div className="eventDetails">
+                    <span>{event.name}</span>
+                    <a href={event.link}>Register</a>
+                  </div>
+                </div>
               </div>
             ))}
           </div>
