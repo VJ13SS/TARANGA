@@ -13,7 +13,7 @@ import LeaderBoard from "./pages/leaderBoard/leaderBoard";
 export default function App() {
   const navigate = useNavigate();
   const [displayLoader, setDisplayLoader] = useState(true);
-  const delay = 8000
+  const delay = window.innerWidth < 501 ? 3300 :8000
   useEffect(() => {
     navigate("/");
     setTimeout(() => {
@@ -21,25 +21,21 @@ export default function App() {
     }, delay);
   }, []);
 
-  {
-    /*<div className="app">
-          <Loader />
-        </div> */
-  }
 
   if (displayLoader) {
     return (
       <div className="app" style={{overflow:'hidden'}}>
         {window.innerWidth < 500 ?
-        <video autoPlay loop muted playsInline className="backVideo">
-          <source src="./eventVideoMobile.mp4" type="video/mp4" />
-        </video> :
+        <div className="loadingImg">
+          <img src="./tarangaLogo.jpg" alt="" />
+        </div> :
         <video autoPlay loop muted playsInline className="backVideo">
           <source src="./eventVideo.mp4" type="video/mp4" />
         </video>}
       </div>
     );
   }
+  
 
   return (
     <div className="app">

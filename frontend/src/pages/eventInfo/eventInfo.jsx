@@ -36,45 +36,47 @@ export default function EventInfo() {
     },
   ];
 
-  const day1Events = [
-    {
-      name: "Inauguration  Ceremony",
-      time: "10 - 10:30 Am",
-      venue: "College Auditorium",
-    },
-    {
+  /*{
       name: "Welcome Address",
-      time: "10:30 - 10:45 Am",
+      time: "10:30 - 10:45 AM",
       venue: "College Auditorium",
     },
     {
       name: "Faculty Speech",
-      time: "10:45 - 11:15 Am",
+      time: "10:45 - 11:15 AM",
       venue: "College Auditorium",
     },
     {
       name: "Keynote Talk By Chief Guest",
-      time: "11:15 - 11:30 Am",
+      time: "11:15 - 11:30 AM",
       venue: "College Auditorium",
     },
     {
       name: "Magazine Publish",
-      time: "11:30 - 11:45 Am",
+      time: "11:30 - 11:45 AM",
       venue: "College Auditorium",
     },
     {
       name: "Flash Intro Video",
-      time: "11:45 Am - 12 Pm",
+      time: "11:45 AM - 12 PM",
+      venue: "College Auditorium",
+    }, */
+
+  const day1Events = [
+    {
+      name: "Inauguration  Ceremony",
+      time: "10 AM - 12 PM",
       venue: "College Auditorium",
     },
+
     {
       name: "Alumni Talk Session",
-      time: "1 - 2 Pm",
+      time: "1 - 2 PM",
       venue: "College Auditorium",
     },
     {
       name: "Project Exhibition",
-      time: "2 - 5 Pm",
+      time: "2 - 5 PM",
       venue: "College Auditorium",
     },
   ];
@@ -82,27 +84,27 @@ export default function EventInfo() {
   const day2Events = [
     {
       name: "FPGA Workshop",
-      time: "9 Am - 4 Pm",
+      time: "9 AM - 4 PM",
       venue: "EC Lab",
     },
     {
       name: "Tech Pictionary Game",
-      time: "9:30 Am - 12 Pm",
+      time: "9:30 AM - 12 PM",
       venue: "EC Classroom",
     },
     {
       name: "Resistor Color Code Race",
-      time: "9:30 Am - 12 Pm",
+      time: "9:30 AM - 12 PM",
       venue: "EC Classroom",
     },
     {
       name: "Hackathon Kickoff",
-      time: "2 Pm - Ongoing",
-      venue: "Skill Development Centre",
+      time: "2 PM - Ongoing",
+      venue: "Skill DeveloPMent Centre",
     },
     {
       name: "CAD Session (Tentative)",
-      time: "1 - 5 Pm",
+      time: "1 - 5 PM",
       venue: "CAD Lab (Mechanical)",
     },
   ];
@@ -110,27 +112,27 @@ export default function EventInfo() {
   const day3Events = [
     {
       name: "AR/VR Workshop",
-      time: "9 Am - 4 pm",
+      time: "9 AM - 4 PM",
       venue: "EC Seminar Hall",
     },
     {
       name: "Component Memory Game",
-      time: "9:30 Am - 12 Pm",
+      time: "9:30 AM - 12 PM",
       venue: "EC Classroom",
     },
     {
       name: "Emoji Quiz - Tech Edition",
-      time: "9:30 Am - 12 Pm",
+      time: "9:30 AM - 12 PM",
       venue: "EC Classroom",
     },
     {
       name: "Hackathon Final Demonstration & Judging",
-      time: "10 Am - 12 Pm",
-      venue: "Skill Development Center",
+      time: "10 AM - 12 PM",
+      venue: "Skill DeveloPMent Center",
     },
     {
       name: "Cultural Programs",
-      time: "3 - 7 Pm",
+      time: "3 - 7 PM",
       venue: "Auditorium",
     },
   ];
@@ -151,19 +153,27 @@ export default function EventInfo() {
     <section className="eventInfo">
       {eventType === "Pre Events" ? (
         <>
-          <h1><i>Pre Events</i></h1>
+          <h1>
+            <i>Pre Events</i>
+          </h1>
           <div className="plannedEvents">
             {preEvents.map((event, indx) => (
               <div className="plannedEvent">
-                <h2><i>{event.name}</i></h2>
-                <span><i>{event.mode}</i></span>
+                <h2>
+                  <i>{event.name}</i>
+                </h2>
+                <span>
+                  <i>{event.mode}</i>
+                </span>
               </div>
             ))}
           </div>
         </>
       ) : (
         <>
-          <h1><i>Major Events</i></h1>
+          <h1>
+            <i>Major Events</i>
+          </h1>
           <div className="days">
             <div
               className="day"

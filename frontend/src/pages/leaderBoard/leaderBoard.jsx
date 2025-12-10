@@ -31,35 +31,35 @@ export default function LeaderBoard() {
   const tableData = [
     {
       team: "S2 ECE A",
-      score: 23,
+      score: 0,
     },
     {
       team: "S2 ECE A",
-      score: 23,
+      score: 0,
     },
     {
       team: "S4 ECE A",
-      score: 23,
+      score: 0,
     },
     {
       team: "S4 ECE A",
-      score: 23,
+      score: 0,
     },
     {
       team: "S6 ECE A",
-      score: 23,
+      score: 0,
     },
     {
       team: "S6 ECE A",
-      score: 23,
+      score: 0,
     },
     {
       team: "S8 ECE A",
-      score: 23,
+      score: 0,
     },
     {
       team: "S8 ECE A",
-      score: 23,
+      score: 0,
     },
   ];
 
@@ -87,7 +87,7 @@ export default function LeaderBoard() {
       <h1>
         <i>Leader Board</i>
       </h1>
-      {teams.length == 0 ? <h2>Fetching Information..!</h2> :
+      {tableData.length == 0 ? <h2>Fetching Information..!</h2> :
       <table>
         <thead>
           <tr>
@@ -97,10 +97,11 @@ export default function LeaderBoard() {
           </tr>
         </thead>
         <tbody>
-          {teams.map((data, indx) => (
+          {tableData.map((data, indx) => (
             <tr>
               <td
                 style={
+                  data.score == 0?{ color: "gray" }:
                   indx == 0
                     ? firstStyles
                     : indx == 1
@@ -114,6 +115,7 @@ export default function LeaderBoard() {
               </td>
               <td
                 style={
+                  data.score == 0?{ color: "gray" }:
                   indx == 0
                     ? firstStyles
                     : indx == 1
@@ -127,6 +129,7 @@ export default function LeaderBoard() {
               </td>
               <td
                 style={
+                  data.score == 0?{ color: "gray" }:
                   indx == 0
                     ? firstStyles
                     : indx == 1

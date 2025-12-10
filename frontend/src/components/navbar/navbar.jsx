@@ -9,6 +9,23 @@ export default function Navbar() {
   };
   const { currentSection, setCurrentSection } = useContext(AppContext);
   const navigate = useNavigate();
+  /*<li
+          style={
+            currentSection === "leaderBoard"
+              ? { border: "2px solid white" }
+              : {}
+          }
+        >
+          <i>
+            <Link
+              to="/leaderBoard"
+              style={linkStyle}
+              onClick={() => setCurrentSection("leaderBoard")}
+            >
+              LeaderBoard
+            </Link>
+          </i>
+        </li> */
   return (
     <nav>
       <span className="nav-left" onClick={() => navigate("/")}>
@@ -59,23 +76,7 @@ export default function Navbar() {
           </i>
         </li>
 
-        <li
-          style={
-            currentSection === "leaderBoard"
-              ? { border: "2px solid white" }
-              : {}
-          }
-        >
-          <i>
-            <Link
-              to="/leaderBoard"
-              style={linkStyle}
-              onClick={() => setCurrentSection("leaderBoard")}
-            >
-              LeaderBoard
-            </Link>
-          </i>
-        </li>
+        
       </ul>
       <a href="https://elacsta-website.vercel.app/" className="nav-right">
         <i>Elacsta</i>
