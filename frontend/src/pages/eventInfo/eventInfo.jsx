@@ -132,11 +132,6 @@ export default function EventInfo() {
       time: "10 AM - 12 PM",
       venue: "Skill DeveloPMent Center",
     },
-    {
-      name: "Cultural Programs",
-      time: "3 - 7 PM",
-      venue: "Auditorium",
-    },
   ];
 
   const dayStyle = {

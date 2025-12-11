@@ -121,6 +121,7 @@
 }
 .preEvent:hover .eventInfoCard{
   transform: rotateY(180deg);
+
 }
 
 .plannedEvent span {
