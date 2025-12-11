@@ -169,9 +169,7 @@ export default function EventInfo() {
         </>
       ) : (
         <>
-          <h1>
-            <i>Major Events</i>
-          </h1>
+          
           <div className="days">
             <div
               className="day"
