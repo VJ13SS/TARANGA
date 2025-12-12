@@ -1,7 +1,7 @@
 import { useContext, useState } from "react";
 import "./eventInfo.css";
 import { AppContext } from "../../context/appContext";
-import { FiClock, FiMapPin } from "react-icons/fi";
+import { FiClock, FiMapPin, FiZap } from "react-icons/fi";
 export default function EventInfo() {
   const [chosenDay, setChosenDay] = useState("day1");
   const { eventType, setEventType } = useContext(AppContext);
@@ -38,48 +38,25 @@ export default function EventInfo() {
     },
   ];
 
-  /*{
-      name: "Welcome Address",
-      time: "10:30 - 10:45 AM",
-      venue: "College Auditorium",
-    },
-    {
-      name: "Faculty Speech",
-      time: "10:45 - 11:15 AM",
-      venue: "College Auditorium",
-    },
-    {
-      name: "Keynote Talk By Chief Guest",
-      time: "11:15 - 11:30 AM",
-      venue: "College Auditorium",
-    },
-    {
-      name: "Magazine Publish",
-      time: "11:30 - 11:45 AM",
-      venue: "College Auditorium",
-    },
-    {
-      name: "Flash Intro Video",
-      time: "11:45 AM - 12 PM",
-      venue: "College Auditorium",
-    }, */
-
   const day1Events = [
     {
       name: "Inauguration  Ceremony",
-      time: "10 AM - 12 PM",
+      img: "./inauguration.png",
       venue: "College Auditorium",
+      time: "10AM - 12PM",
     },
 
     {
       name: "Alumni Talk Session",
-      time: "1 - 2 PM",
+      img: "./Alumni.png",
       venue: "College Auditorium",
+      time: "1 - 2PM",
     },
     {
       name: "Project Exhibition",
-      time: "2 - 5 PM",
+      img: "./exhibition.png",
       venue: "College Auditorium",
+      time: "2 - 5PM",
     },
   ];
 
@@ -148,6 +125,7 @@ export default function EventInfo() {
 
   return (
     <section className="eventInfo">
+      <span><i><FiZap /> Try clicking each Image to know more...!</i></span>
       {eventType === "Pre Events" ? (
         <>
           <div className="plannedEvents">
@@ -158,8 +136,10 @@ export default function EventInfo() {
                     <img src={event.img} alt="" />
                   </div>
                   <div className="eventDetails">
-                    <i><span>{event.name}</span></i>
-                    
+                    <i>
+                      <span>{event.name}</span>
+                    </i>
+
                     <a href={event.link}>Register</a>
                   </div>
                 </div>
@@ -169,7 +149,6 @@ export default function EventInfo() {
         </>
       ) : (
         <>
-          
           <div className="days">
             <div
               className="day"
@@ -196,20 +175,28 @@ export default function EventInfo() {
           <div className="plannedEvents">
             {chosenDay === "day1"
               ? day1Events.map((event, indx) => (
-                  <div className="plannedEvent">
-                    <h2>
-                      <i>{event.name}</i>
-                    </h2>
-                    <span>
-                      <i>
-                        <FiClock /> {event.time}
-                      </i>
-                    </span>
-                    <span>
-                      <i>
-                        <FiMapPin /> {event.venue}{" "}
-                      </i>
-                    </span>
+                  <div className="preEvent">
+                    <div className="eventInfoCard">
+                      <div className="eventImage">
+                        <img src={event.img} alt="" />
+                      </div>
+                      <div className="eventDetails">
+                        <i>
+                          <span>{event.name}</span>
+                        </i>
+                        <span>
+                          <i>
+                            <FiClock /> {event.time}
+                          </i>
+                        </span>
+
+                        <span>
+                          <i>
+                            <FiMapPin /> {event.venue}
+                          </i>
+                        </span>
+                      </div>
+                    </div>
                   </div>
                 ))
               : chosenDay === "day2"
